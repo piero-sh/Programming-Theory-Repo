@@ -4,28 +4,30 @@ using UnityEngine;
 
 public class GlassPartsManager : MonoBehaviour
 {
-    public GlassPartsManager Instance { get; private set; }
+    public static GlassPartsManager Instance { get; private set; }
     
     [SerializeField]
     private GameObject glassPartModel;
+    private Transform parent;
+    private List<Rigidbody> rigidbodies;
 
-    public void Start()
+    public void Awake()
     {
         if(Instance != null){
             Destroy(gameObject);
             return;
         }
         Instance = this;
+        rigidbodies = new List<Rigidbody>();
     }
 
     public void Generate(Transform _transform)
     {
-        List<Rigidbody> rigidbodies = new List<Rigidbody>();
-
-        GameObject parent = new GameObject();
+        parent = new GameObject().transform;
         parent.transform.position = _transform.position;
         parent.transform.rotation = _transform.rotation;
         parent.transform.localScale = Vector3.one;
+        parent.gameObject.SetActive(false);
 
         float rowCount = Mathf.Floor(_transform.localScale.x / glassPartModel.transform.localScale.x);
         Vector3 startPosition = new Vector3(
@@ -48,14 +50,30 @@ public class GlassPartsManager : MonoBehaviour
                     {
                         continue;
                     }
-                    GameObject part = GameObject.Instantiate(glassPartModel, position, Quaternion.identity, parent.transform);
+                    GameObject part = GameObject.Instantiate(glassPartModel, position, glassPartModel.transform.rotation, parent.transform);
                     rigidbodies.Add(part.GetComponent<Rigidbody>());
                 }
             }
         }
+        #if UNITY_EDITOR
+        Debug.Log(rigidbodies.Count + " glass parts created");
+        #endif
+    }
+
+    public void Activate(Transform _transform)
+    {
+        if(rigidbodies == null)
+        {
+            return;
+        }
+        
+        parent.position = _transform.position;
+        parent.gameObject.SetActive(true);
+
         for(int i = 0; i < rigidbodies.Count; i++)
         {
             rigidbodies[i].isKinematic = false;
+            rigidbodies[i].AddForce(Vector3.down * 11f, ForceMode.VelocityChange);
         }
     }
 }

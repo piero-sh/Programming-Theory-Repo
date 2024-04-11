@@ -344,7 +344,12 @@
 -r:"Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"/home/pc/Applications/Unity/Installs/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/home/pc/Applications/Unity/Installs/2022.3.20f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/Scripts/Ball.cs"
+"Assets/Scripts/GlassBall.cs"
 "Assets/Scripts/GlassPartsManager.cs"
+"Assets/Scripts/RubberBall.cs"
+"Assets/Scripts/SteelBall.cs"
+"Assets/Scripts/UIManager.cs"
 -langversion:9.0
 
 /deterministic

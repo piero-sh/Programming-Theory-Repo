@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4035331506544891642, guid: 622bdc03e795b40338e51e1dd4104124, type: 3}
       propertyPath: m_Name
-      value: Glass Ball Prefab Variant
+      value: Glass Ball Prefab
       objectReference: {fileID: 0}
     - target: {fileID: 6465912169447491102, guid: 622bdc03e795b40338e51e1dd4104124, type: 3}
       propertyPath: m_LocalPosition.x
@@ -59,5 +59,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4035331506544891642, guid: 622bdc03e795b40338e51e1dd4104124, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5304067239808997677}
   m_SourcePrefab: {fileID: 100100000, guid: 622bdc03e795b40338e51e1dd4104124, type: 3}
+--- !u!1 &7954994508439449350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4035331506544891642, guid: 622bdc03e795b40338e51e1dd4104124, type: 3}
+  m_PrefabInstance: {fileID: 6225577754444413436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5304067239808997677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7954994508439449350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f3ddfdefbed08e29a586c80ad088b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

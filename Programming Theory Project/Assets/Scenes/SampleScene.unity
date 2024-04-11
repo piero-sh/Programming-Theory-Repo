@@ -722,6 +722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 871543570}
+  - component: {fileID: 871543571}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -750,6 +751,21 @@ Transform:
   - {fileID: 1356484998}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &871543571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871543569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a4b2024ccdc568fa6c13e1fdc327eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glassText: {fileID: 1523976901}
+  rubberText: {fileID: 2119065806}
+  steelText: {fileID: 1356484999}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,7 +2099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1143414197614329826, guid: 35cefa119f3cececabceb0555ad55843, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1143414197614329826, guid: 35cefa119f3cececabceb0555ad55843, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2144,7 +2160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5686484214815485337, guid: b673eb4f48dd230e7ab8297824f750e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5686484214815485337, guid: b673eb4f48dd230e7ab8297824f750e1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2178,6 +2194,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7409295887470558752, guid: b673eb4f48dd230e7ab8297824f750e1, type: 3}
+      propertyPath: cracksMarks
+      value: 
+      objectReference: {fileID: 1977120888}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2201,7 +2221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009804741195112514, guid: 75a57250fcd5718c6b0f94b8a87bf5f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7009804741195112514, guid: 75a57250fcd5718c6b0f94b8a87bf5f2, type: 3}
       propertyPath: m_LocalPosition.z
