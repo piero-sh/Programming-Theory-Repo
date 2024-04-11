@@ -21,6 +21,7 @@ public class GlassPartsManager : MonoBehaviour
         rigidbodies = new List<Rigidbody>();
     }
 
+    // ABSTRACTION
     public void Generate(Transform _transform)
     {
         parent = new GameObject().transform;
@@ -60,6 +61,7 @@ public class GlassPartsManager : MonoBehaviour
         #endif
     }
 
+    // ABSTRACTION
     public void Activate(Transform _transform)
     {
         if(rigidbodies == null)

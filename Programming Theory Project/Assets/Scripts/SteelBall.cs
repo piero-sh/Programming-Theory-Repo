@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class SteelBall : Ball
 {
     [SerializeField]
@@ -27,6 +28,7 @@ public class SteelBall : Ball
         UIManager.Instance.UpdateSteelBallText();
     }
     
+    // POLYMORPHISM
     protected override void CollisionEvent()
     {
         base.CollisionEvent();

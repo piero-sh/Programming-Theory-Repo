@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    // ENCAPSULATION
     public int bouncesCount { get; protected set; }
 
     void OnCollisionEnter(Collision other)

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class GlassBall : Ball
 {
     public static GlassBall Instance { get; private set; }
@@ -21,6 +22,7 @@ public class GlassBall : Ball
         GlassPartsManager.Instance.Generate(transform);
     }
 
+    // POLYMORPHISM
     protected override void CollisionEvent()
     {
         base.CollisionEvent();

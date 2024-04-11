@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class RubberBall : Ball
 {
     public static RubberBall Instance { get; private set; }
@@ -20,6 +21,7 @@ public class RubberBall : Ball
         UIManager.Instance.UpdateRubberBallText();
     }
     
+    // POLYMORPHISM
     protected override void CollisionEvent()
     {
         base.CollisionEvent();
