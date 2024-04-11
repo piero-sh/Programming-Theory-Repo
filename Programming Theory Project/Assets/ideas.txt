@@ -1,0 +1,25 @@
+ 
+3 balls
+1 made of rubber
+1 made of steel
+1 made of glass
+
+All 3 balls share the same prefab settings (rigidbody/mass...)
+They all derivate from a main class Ball. There is GlassBall, SteelBall, RubberBall (inheritance).
+All three balls are falling side by side from the same height.
+The physics and controls are implemented un the Ball class. As well as collisions detection.
+When a collision is detected, a CollisionEvent method is called.
+Each ball subclass override CollisionEvent and react differently (polymorphism).
+The rubber ball bounce back up, the steel ball slightly break the ground, the glass ball shatter in pieces.
+There is at the ground of each ball a UI text that display said ball rigidbody velocity/magnitude.
+Said UI elements are controlled by a single class that update each ui text by calling in update
+SteelBallVelocityUI, RubberBallVelocityUI, GlassBallVelocityUI (abstraction). Each method retrieve
+each ball if it exist, each ball being accessible by a singleton instance (encapsulation), and display
+their rigidbody velocity/magnitude (rigidbody accessed by get/set).
+
+needed:
+one ball prefab, 3 child prefab & 3 textures.
+one "broken ground" texture for the steel ball.
+one animation of shattering for the glass ball (replaced by animated cubes ?)
+3 world ui texts under a parent that contains the script that control them.
+one physics material for the rubber ball ? or bounce managed by simple upward physics (polymorphism ?)
